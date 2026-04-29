@@ -11,3 +11,6 @@ Route::post('/users', [UserController::class, 'store']);
 Route::get('/business-logs', [BusinessLogController::class, 'index']);
 Route::get('/business-logs/{id}', [BusinessLogController::class, 'show']);
 Route::post('/business-logs', [BusinessLogController::class, 'store']);
+Route::get('/business-logs/user/{userId}', [BusinessLogController::class, 'showByUser']);
+Route::put('/business-logs/{id}', [BusinessLogController::class, 'update']);
+Route::delete('/business-logs/{id}', [BusinessLogController::class, 'destroy']);
